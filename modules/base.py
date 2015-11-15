@@ -1,5 +1,5 @@
 import random
-from variables import *
+from modules.variables import *
 import os, sys
 
 def sauv(tableau,cheminfichier):

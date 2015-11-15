@@ -1,5 +1,5 @@
 import random
-from variables import *
+from modules.variables import *
 
 
 
@@ -15,30 +15,6 @@ def load_tile_table(filename, width, height):
             line.append(image.subsurface(rect))
     return tile_table
 
-
-#def poser(tilex,tiley,r,g,b,ar,ag,ab,x,y):
-#	i,j=0,0
-#	table = load_tile_table(tilesheet, taille_tile,taille_tile)
-#	floorsheet = load_tile_table(floor,taille_tile,taille_tile)
-#	t=table[tilex]
-#	tile=t[tiley]
-#	t=floorseet[tilex]
-#	tile=t[tiley]
-#	image_width, image_height = tile.get_size()
-#	while i<image_width:
-#		while j<image_height:
-#			
-#			if tile.get_at((i,j)) == couleur_dessin_tile:
-#				tile.set_at((i,j),(r,g,b))
-#				
-#			if tile.get_at((i,j)) == couleur_fond_tile:
-#				tile.set_at((i,j),(ar,ag,ab))
-#				
-#			j=j+1
-#		i=i+1
-#		j=0
-#	tilecharge.append(tile)
-#	fenetre.blit(tile, (x*taille_tile, y*taille_tile))
 
 
 def creationdicofloorsheet():
@@ -60,6 +36,7 @@ def afficher(x,y,z,dicofloorsheet):
 			mx=dic[1]
 			my=dic[2]
 			floorsheet=dicofloorsheet[dic[0]]
+			print(str(mx)+" "+str(my))
 			tile=floorsheet[mx][my]
 			if z>altitude[x+i][y+j]:
 				tile.set_alpha(transparence[altitude[x+i][y+j]-z])

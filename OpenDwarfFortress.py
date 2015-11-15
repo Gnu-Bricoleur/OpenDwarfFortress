@@ -106,7 +106,7 @@ if choix !=0:
 		afficher(zonefenetrex,zonefenetrey,zonefenetrez,dicofloorsheet)
 	if choix == 3:
 		print(">> Nouveau monde")
-		taillemonde=500
+		taillemonde=100
 		heightmap()
 		visibilite()
 		sol()

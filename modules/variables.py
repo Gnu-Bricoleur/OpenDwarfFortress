@@ -11,7 +11,7 @@ hill0="images/DawnLike/Objects/Hill032.png"
 
 taillemaille=20
 taille_tile = 32
-taillemonde=500
+taillemonde=100
 hauteurmonde=30
 nombre_sprite_cote_x = 21
 nombre_sprite_cote_y = 31
@@ -74,6 +74,6 @@ dicoloc[1111117]=(floor,15,4)
 dicoid[1111118]="sommets"
 dicoloc[1111118]=(hill0,5,1)
 dicoid[1111119]="eauprofonde"
-dicoloc[1111119]=(pit0,15,1)
+dicoloc[1111119]=(pit0,1,15)
 
 

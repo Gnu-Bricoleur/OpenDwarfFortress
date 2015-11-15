@@ -1,2 +1,2 @@
 import random
-from variables import *
+from modules.variables import *
