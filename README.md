@@ -1,6 +1,6 @@
 # OpenDwarfFortress
 
-L'objectif est de creer un jeu de type clone de Dwarf Fortress en Open Source.
+L'objectif est de creer clone du jeu Dwarf Fortress en Open Source en améliorant l'interface et en ajoutant des fonctionnalitées tout en conservant la profondeur de jeu.
 
 Pour comprendre le code rendez vous sur le wiki : http://gnu-bricoleur.tuxfamily.org/dokuwiki/doku.php?id=start
 
