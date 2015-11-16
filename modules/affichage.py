@@ -27,8 +27,8 @@ def creationdicofloorsheet():
 
 def afficher(x,y,z,dicofloorsheet):
 	i,j,k=0,0,0
-	print(x)
-	print(y)
+#	print(x)
+#	print(y)
 	while i<nombre_sprite_cote_y:
 		while j<nombre_sprite_cote_x:
 			intermediaire=visible[i+x][j+y][z]
@@ -36,7 +36,7 @@ def afficher(x,y,z,dicofloorsheet):
 			mx=dic[1]
 			my=dic[2]
 			floorsheet=dicofloorsheet[dic[0]]
-			print(str(mx)+" "+str(my))
+#			print(str(mx)+" "+str(my))
 			tile=floorsheet[mx][my]
 			if z>altitude[x+i][y+j]:
 				tile.set_alpha(transparence[altitude[x+i][y+j]-z])
@@ -44,3 +44,21 @@ def afficher(x,y,z,dicofloorsheet):
 			j=j+1
 		j=0
 		i=i+1
+		
+
+def captureimage(dicofloorsheet):
+	i,j,z=0,0,29
+	capture = pygame.Surface((taille_tile*taillemonde,taille_tile*taillemonde))
+	while i<taillemonde:
+		while j<taillemonde:
+			intermediaire=visible[i][j][z]
+			dic=dicoloc[intermediaire]
+			mx=dic[1]
+			my=dic[2]
+			floorsheet=dicofloorsheet[dic[0]]
+			tile=floorsheet[mx][my]
+			capture.blit(tile, (i*taille_tile, j*taille_tile))
+			j=j+1
+		j=0
+		i=i+1
+	pygame.image.save(capture,"captures/capture.png")

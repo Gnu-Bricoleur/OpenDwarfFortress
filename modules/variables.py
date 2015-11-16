@@ -11,7 +11,7 @@ hill0="images/DawnLike/Objects/Hill032.png"
 
 taillemaille=20
 taille_tile = 32
-taillemonde=100
+taillemonde=200
 hauteurmonde=30
 nombre_sprite_cote_x = 21
 nombre_sprite_cote_y = 31
@@ -45,6 +45,15 @@ dejacharge=[]
 indentifiant=[]
 tilecharge=[]
 alea=0
+
+# Variables generation.py
+octaves=50
+freq = 16.0 * octaves
+
+
+
+
+
 # Base de donne tile
 transparence=[0,20,40,60,80,100,120,140,160,180,200,220,240,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255]
 

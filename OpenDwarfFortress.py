@@ -163,3 +163,5 @@ if choix !=0:
 						fenetre.fill((255, 255, 255))
 						afficher(zonefenetrex,zonefenetrey,zonefenetrez,dicofloorsheet)
 						pygame.display.flip()
+				if event.key == K_c:
+						captureimage(dicofloorsheet)

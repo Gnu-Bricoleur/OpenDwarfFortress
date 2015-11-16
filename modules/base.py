@@ -62,4 +62,6 @@ def charge2D(tableau,cheminfichier):
 		i=i+1
 	sauv.close()
 
-
+	
+	
+	

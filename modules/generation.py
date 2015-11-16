@@ -18,7 +18,7 @@ def heightmap():
 	i,j=0,0
 	while i < taillemonde:
 		while j < taillemonde:
-			relief[i][j]=int((noise.snoise2(i,j,10)*10)+10)
+			relief[i][j]=(int(noise.snoise2(i / freq, j / freq, octaves)*14.0 + 15.0))
 			j=j+1
 		j=0
 		i=i+1
