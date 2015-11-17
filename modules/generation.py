@@ -2,23 +2,26 @@ import random
 from math import *
 from modules.base import *
 from modules.variables import *
-import noise
+from modules.simplexnoise import *
 
 def creationmonde():
-	print("### GENERATION ###")
+	print("### CREATION DU MONDE ###")
+	print(">> Generation")
 	heightmap()
 	sol()
-	visibilite()	
-	sauv(monde,"sauvegardes/sauvmonde.txt")
-	sauv(visible,"sauvegardes/sauvvisu.txt")
-	sauv2D(altitude,"sauvegardes/sauvaltitude.txt")
-	sauv2D(relief,"sauvegardes/sauvrelief.txt")
+	visibilite()
+	print(">> Sauvegarde")
+	sauvegarde(monde,"sauvegardes/sauvmonde.txt")
+	sauvegarde(visible,"sauvegardes/sauvvisu.txt")
+	sauvegarde(altitude,"sauvegardes/sauvaltitude.txt")
+	sauvegarde(relief,"sauvegardes/sauvrelief.txt")
 
 def heightmap():
 	i,j=0,0
 	while i < taillemonde:
 		while j < taillemonde:
-			relief[i][j]=(int(noise.snoise2(i / freq, j / freq, octaves)*14.0 + 15.0))
+#			relief[i][j]=(int(noise.snoise2(i / freq, j / freq, octaves)*14.0 + 15.0))
+			relief[i][j]=(int(octave_noise_3d(octaves,0.2,1,i/freq,j/freq,seed)*14.0 +15.0))
 			j=j+1
 		j=0
 		i=i+1

@@ -1,6 +1,6 @@
 import pygame
 import numpy as np
-
+import time
 
 # Variables pour l'affichage (non modifie pendant le jeu)
 tilesheet = "images/zilk.png"
@@ -47,9 +47,9 @@ tilecharge=[]
 alea=0
 
 # Variables generation.py
-octaves=50
+octaves=5
 freq = 16.0 * octaves
-
+seed = int(time.time()/1000000)
 
 
 

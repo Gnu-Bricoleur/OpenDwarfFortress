@@ -1,6 +1,6 @@
 import random
 from modules.variables import *
-
+import time
 
 
 def load_tile_table(filename, width, height):
@@ -61,4 +61,5 @@ def captureimage(dicofloorsheet):
 			j=j+1
 		j=0
 		i=i+1
-	pygame.image.save(capture,"captures/capture.png")
+	nomdefichier="captures/capture"+str(int(time.time()/1000000))+".png"
+	pygame.image.save(capture,nomdefichier)

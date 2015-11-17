@@ -1,6 +1,8 @@
 import random
 from modules.variables import *
 import os, sys
+import pickle
+
 
 def sauv(tableau,cheminfichier):
 	sauv=open(cheminfichier,"w")
@@ -62,6 +64,16 @@ def charge2D(tableau,cheminfichier):
 		i=i+1
 	sauv.close()
 
+
+def sauvegarde(objet, fichier):
+	with open(fichier, 'wb') as fichier:
+		mon_pickler = pickle.Pickler(fichier)
+		mon_pickler.dump(objet)
+		
+def chargement(objet, fichier):
+	with open(fichier, 'rb') as fichier:
+		mon_depickler = pickle.Unpickler(fichier)
+		objet = mon_depickler.load()
 	
 	
 	

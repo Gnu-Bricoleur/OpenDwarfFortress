@@ -113,9 +113,9 @@ if choix !=0:
 		afficher(zonefenetrex,zonefenetrey,zonefenetrez,dicofloorsheet)
 	else:
 		print(">> Chargement")
-		charge(monde,"sauvegardes/sauvmonde.txt")
-		charge(visible,"sauvegardes/sauvvisu.txt")
-		charge2D(altitude,"sauvegardes/sauvaltitude.txt")
+		chargement(monde,"sauvegardes/sauvmonde.txt")
+		chargement(visible,"sauvegardes/sauvvisu.txt")
+		chargement(altitude,"sauvegardes/sauvaltitude.txt")
 		afficher(zonefenetrex,zonefenetrey,zonefenetrez,dicofloorsheet)
 	pygame.display.flip()
 	print(">> Affichage !!!")
