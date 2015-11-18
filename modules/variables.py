@@ -38,6 +38,7 @@ monde = np.zeros((taillemonde+1, taillemonde+1, hauteurmonde), dtype='i')
 visible = np.zeros((taillemonde+1, taillemonde+1, hauteurmonde), dtype='i')
 relief=np.zeros((taillemonde+1, taillemonde+1), dtype='i')
 altitude=np.zeros((taillemonde+1,taillemonde+1),dtype='i')
+obstacles=np.zeros((taillemonde+1, taillemonde+1), dtype='i')
 
 fenetre = pygame.display.set_mode((nombre_sprite_cote_y*taille_tile, nombre_sprite_cote_x*taille_tile))
 
@@ -49,7 +50,7 @@ alea=0
 # Variables generation.py
 octaves=5
 freq = 16.0 * octaves
-seed = int(time.time()/1000000)
+seed = int(time.time())
 
 
 

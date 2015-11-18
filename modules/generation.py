@@ -16,12 +16,15 @@ def creationmonde():
 	sauvegarde(altitude,"sauvegardes/sauvaltitude.txt")
 	sauvegarde(relief,"sauvegardes/sauvrelief.txt")
 
+
+#Jouer sur la frequence (3eme arg) pour le "zoom"
+
 def heightmap():
 	i,j=0,0
 	while i < taillemonde:
 		while j < taillemonde:
 #			relief[i][j]=(int(noise.snoise2(i / freq, j / freq, octaves)*14.0 + 15.0))
-			relief[i][j]=(int(octave_noise_3d(octaves,0.2,1,i/freq,j/freq,seed)*14.0 +15.0))
+			relief[i][j]=(int(octave_noise_3d(octaves,0.2,0.5,i/freq,j/freq,seed)*14.0 +15.0))
 			j=j+1
 		j=0
 		i=i+1
@@ -75,4 +78,15 @@ def visibilite():
 		j=0
 		i=i+1
 
+"""
+# Fonctionne si TABLEAU[LIGNE][COLLONNE]
+def affobstacle():
+	i,j=1,1
+	while i < taillemonde-1:
+		while j < taillemonde-1:
+			if relief[i-1][j]:
+			j=j+1
+		j=0
+		i=i+1
 
+"""

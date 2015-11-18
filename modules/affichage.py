@@ -61,5 +61,5 @@ def captureimage(dicofloorsheet):
 			j=j+1
 		j=0
 		i=i+1
-	nomdefichier="captures/capture"+str(int(time.time()/1000000))+".png"
+	nomdefichier="captures/capture"+str(int(time.time()))+".png"
 	pygame.image.save(capture,nomdefichier)
